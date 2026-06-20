@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NACHZONE</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+
+  <div class="logo">NACHZONE</div>
+
+  <nav class="navbar" id="navbar">
+    <a href="index.html">Accueil</a>
+    <a href="videos.html">Vidéos</a>
+    <a href="musique.html">Musiques</a>
+    <a href="apropos.html">À propos</a>
+
+    <!-- ADMIN -->
+  <a href="#" id="adminLoginBtn">Admin Login</a>
+<a href="admin.html" id="adminLink" style="display:none;">Admin Panel</a>
+  </nav>
+
+  <div class="header-right">
+    <button id="themeToggle" class="theme-btn">🌙</button>
+
+    <div class="burger" id="burger">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </div>
+
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+  <div class="hero-content">
+    <h1>Télécharge tes vidéos et musiques préférées</h1>
+    <p>Plateforme moderne de téléchargement multimédia</p>
+
+    <button id="openModal">Commencer</button>
+  </div>
+
+</section>
+
+<!-- MODAL LOGIN / REGISTER -->
+<div class="modal" id="modal">
+
+  <div class="form-box">
+
+    <span class="close" id="closeModal">&times;</span>
+
+    <!-- INSCRIPTION -->
+    <div id="registerContainer">
+
+      <h2>Inscription</h2>
+
+      <form id="registerForm">
+        <input type="text" placeholder="Nom utilisateur" required>
+        <input type="email" placeholder="Adresse email" required>
+        <input type="password" placeholder="Mot de passe" required>
+
+        <button type="submit">S'inscrire</button>
+      </form>
+
+      <p>
+        Déjà un compte ?
+        <a href="#" id="showLogin">Connexion</a>
+      </p>
+
+    </div>
+
+    <!-- CONNEXION -->
+    <div id="loginContainer" class="hidden">
+
+      <h2>Connexion</h2>
+
+      <form id="loginForm">
+        <input type="email" placeholder="Adresse email" required>
+        <input type="password" placeholder="Mot de passe" required>
+
+        <button type="submit">Se connecter</button>
+      </form>
+
+      <p>
+        Pas encore de compte ?
+        <a href="#" id="showRegister">Inscription</a>
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- MODAL ADMIN -->
+<div class="modal" id="adminModal">
+
+  <div class="form-box">
+
+    <span class="close" id="closeAdminModal">&times;</span>
+
+    <h2>Admin Login</h2>
+
+    <input type="password" id="adminPassword" placeholder="Mot de passe">
+
+    <button id="adminLoginSubmit">Connexion</button>
+
+  </div>
+
+</div>
+
+<!-- RECHERCHE -->
+<section class="search-section">
+  <input type="text" id="searchInput" placeholder="Rechercher une vidéo...">
+</section>
+
+<!-- VIDEOS -->
+<section class="videos-section locked">
+    <div id="videoContainer"></div>
+
+  <h2>Vidéos populaires</h2>
+
+  <div class="video-container">
+
+    <div class="video-card">
+      <div class="thumbnail">
+        <img src="https://picsum.photos/400/250?1">
+        <button class="play-btn">▶</button>
+      </div>
+
+      <div class="video-info">
+        <h3>Film Action</h3>
+        <p>720p • Action • 2026</p>
+
+        <video controls class="video-player">
+          <source src="assets/videos/video1.mp4" type="video/mp4">
+        </video>
+
+        <a href="assets/videos/video1.mp4" download>Télécharger MP4</a>
+        <a href="assets/videos/music1.mp3" download>Télécharger MP3</a>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <div class="thumbnail">
+        <img src="https://picsum.photos/400/250?2">
+        <button class="play-btn">▶</button>
+      </div>
+
+      <div class="video-info">
+        <h3>Film Sci-Fi</h3>
+        <p>1080p • 2026</p>
+
+        <video controls class="video-player">
+          <source src="assets/videos/video2.mp4" type="video/mp4">
+        </video>
+
+        <a href="assets/videos/video2.mp4" download>TéléchargerMP4</a>
+         <a href="assets/videos/music2.mp3" download>Télécharger MP3</a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- MUSIQUE -->
+<section class="music-section locked">
+
+  <h2>Musiques populaires</h2>
+
+  <div class="music-container">
+
+    <div class="music-card">
+      <img src="https://picsum.photos/300/200?3">
+
+      <h3>Musique Chill</h3>
+
+      <audio controls>
+        <source src="assets/musiques/music1.mp3" type="audio/mpeg">
+      </audio>
+
+      <a href="assets/musiques/music1.mp3" download>TéléchargerMP3</a>
+       <a href="assets/videos/video2.mp4" download>TéléchargerMP4</a>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-container">
+
+      <div class="footer-col">
+
+        <h3>BloG TV</h3>
+
+        <p>
+          Plateforme de streaming moderne.
+        </p>
+
+      </div>
+
+      <div class="footer-col">
+
+        <div class="navigations">
+  <a href="index.html">Accueil</a>
+  <a href="videos.html">Vidéos</a>
+  <a href="musique.html">Musiques</a>
+  <a href="apropos.html">À propos</a>
+</div>
+      </div>
+<div class="footer-col">
+        <h4>Nos contact</h4>
+        <p>
+          +261 32 44 222 42 <br>
+        supportclient@contact.com <br>
+        22 RUE INNOVATION, EAU, 4456</p>
+      </div>
+      <div class="footer-col">
+      <h4> Les Horaires</h4>
+      <ul class="liste-horaires">
+        <p> NB:Jour feriés ce sera le chatbot qui vous répondra</p>
+        <li>✅ Lun 08h-20h00</li>
+         <li>✅ Mar 08h-20h00</li>
+          <li>✅ Mer 08h-20h00</li>
+            <li>✅ Jeu 08h-20h00</li>
+             <li>✅ Ven 08h-20h00</li>
+              <li>✅ Sam 10h-18h00</li>
+               <li>✅ Dim 10h-18h00</li>
+      </ul>
+      </div>
+
+    </div>
+  
+  <p>© 2026 NACHZone - Projet scolaire</p>
+</footer>
+<!-- JS -->
+<script src="j.js"></script>
+
+</body>
+</html>
