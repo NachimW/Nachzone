@@ -367,3 +367,8 @@ body.light .search-section input {
   background: black;
   color: white;
 }
+.header-right{
+  display:flex;
+  align-items: center;
+  gap: 15px;
+}
